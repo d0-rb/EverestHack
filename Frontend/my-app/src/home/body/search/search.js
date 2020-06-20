@@ -6,13 +6,22 @@ import './search.css'
 class Search extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            checked: false
+        }
     }  
+
+    handleToggleSwitch = () => {
+        this.setState({
+            checked: !this.state.checked
+        })
+    }
 
     render() {
         return (
             <div className= "main-search-div">
-                <SearchBar />
-                <Results />
+                <SearchBar onSwitchToggle={this.handleToggleSwitch}/>
+                <Results displayPeople={this.state.checked}/>
             </div>
         )
     }
