@@ -1,0 +1,7 @@
+.main-background-div {
+    background-color: #F5F5F5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+

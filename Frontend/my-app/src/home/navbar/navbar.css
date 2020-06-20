@@ -1,0 +1,12 @@
+.navbar-base-div {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    background-color: white;
+}
+
+.home-icon-div {
+    height: 100%;
+    width: 5vh;
+    background-color: #6F52ED;
+}
