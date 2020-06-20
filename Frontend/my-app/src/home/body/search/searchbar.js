@@ -56,6 +56,7 @@ class SearchBar extends React.Component {
                     </div>
                     <div className= "separator-line dark"></div>
                 </div>
+                <p></p>
                 <PurpleSwitch checked={this.state.checked} onChange= {this.handleChange} name= "bodyToggle"/>
             </div>
         )
