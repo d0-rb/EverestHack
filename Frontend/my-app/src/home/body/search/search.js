@@ -1,4 +1,6 @@
 import React from 'react'
+import SearchBar from './searchbar'
+import Results from './results'
 import './search.css'
 
 class Search extends React.Component {
@@ -9,7 +11,8 @@ class Search extends React.Component {
     render() {
         return (
             <div className= "main-search-div">
-                
+                <SearchBar />
+                <Results />
             </div>
         )
     }
