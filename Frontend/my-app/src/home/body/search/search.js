@@ -1,18 +1,18 @@
 import React from 'react'
-import './index.css'
+import './search.css'
 
-class BodyMain extends React.Component {
+class Search extends React.Component {
     constructor(props) {
         super(props)
-    }
-    
+    }  
+
     render() {
         return (
-            <div className= "main-body-div">
+            <div className= "main-search-div">
                 
             </div>
         )
     }
 }
 
-export default BodyMain;
+export default Search;

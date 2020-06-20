@@ -1,0 +1,44 @@
+.main-dashboard-div {
+    width: 70%;
+    height: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+    padding-top: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.main-dashboard-title {
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-right: 0;
+}
+
+.separator-line {
+    height: 1px;
+    background-color: #EEF0F6;
+    width: 100%;
+}
+
+.calendar-item-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.calendar-item-day {
+    margin-top: 40px;
+    text-align: center;
+    color: #A6ACBE;
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+.calendar-recipes-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

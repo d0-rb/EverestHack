@@ -1,8 +1,9 @@
 .navbar-base-div {
     display: flex;
     flex-direction: row;
-    height: 5vh;
+    height: 5%;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .home-icon-div {

@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './navbar/navbar.js'
-import BodyMain from './body'
+import BodyMain from './body/bodymain'
 import './index.css'
 
 
