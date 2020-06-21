@@ -15,7 +15,7 @@ function newDash(arr, item, day) {
     return temp
 }
 
-let template = [
+let dashboardTemplate = [
     {
         day: "Sunday",
         list: []
@@ -47,8 +47,9 @@ let template = [
     }
 ]
 
+
 // reducer
-function dashManager(state = template, action) {
+function dashManager(state = dashboardTemplate, action) {
     switch (action.type) {
         case 'ADD_ITEM':
             return newDash(state, action.value, action.day)
@@ -58,4 +59,4 @@ function dashManager(state = template, action) {
 // store
 export let store = createStore(dashManager)
 
-
+// pull data to update store

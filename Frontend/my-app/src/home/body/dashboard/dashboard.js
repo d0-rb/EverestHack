@@ -1,8 +1,10 @@
 import React from 'react'
 import CalendarContainer from './calendarcontainer'
 import CalendarItem from './calendaritem'
+import Dialog from '@material-ui/core/Dialog';
 import { store } from '../store'
 import './dashboard.css'
+
 
 let date = new Date();
 let dateNum = date.getDay();
@@ -62,6 +64,9 @@ function handleChange() {
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            open: false
+        }
     }  
 
     componentDidMount() {
@@ -69,6 +74,22 @@ class Dashboard extends React.Component {
             console.log("store updated")
             this.forceUpdate()
         })        
+    }
+
+    handleClick = () => {
+        this.setState({
+            open: true
+        })
+    }
+
+    handleClose = () => {
+        this.setState({
+            open: false
+        })
+    }
+
+    krogerClick = () => {
+
     }
 
     storeGen = (val) => {
@@ -90,6 +111,7 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div className= "main-dashboard-div">
+                
                 <h1 className= "main-dashboard-title">Dashboard</h1>
                 <div className= "separator-line"></div>
                 <div className= "calendar-container-div">
@@ -135,9 +157,19 @@ class Dashboard extends React.Component {
                         this.storeGen(datSeq[6])
                     }
                 </CalendarContainer>
-                <div className= "shopping-cart-container">
+                <div  onClick={this.handleClick} className= "shopping-cart-container">
                     <p className= "material-icons" style= {{margin: "0px", fontSize: "35px", marginLeft: "2px", marginTop: "2px"}}>shopping_cart</p>
                 </div>
+                <Dialog onClose={this.handleClose} open={this.state.open} maxWidth={"md"}>
+                    <div className="shopping-cart-export-base">
+                        <h3 className="shopping-cart-title">Checkout With..</h3>
+                        <div className="shopping-options">
+                            <div onClick= {this.krogerClick} className= "kroger-shop">
+                                <img className="kroger_logo" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Kroger_logo_%281961-2019%29.svg"></img>
+                            </div>
+                        </div>
+                    </div>
+                </Dialog>
                 </div>
             </div>
         )
