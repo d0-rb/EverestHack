@@ -1,13 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import HomeBase from './home/index'
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+Amplify.configure(awsconfig)
 
 function App() {
-  return (
-    <div className="App">
-      <HomeBase />
-    </div>
-  );
+	console.log(Auth);
+	return (
+		<div className="App">
+			<AmplifySignOut />
+			<HomeBase />
+		</div>
+	);
 }
 
-export default App;
+export default withAuthenticator(App, true);
