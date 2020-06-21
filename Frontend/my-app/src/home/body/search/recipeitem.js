@@ -83,26 +83,58 @@ class RecipeItem extends React.Component {
                 break;
         }
         let data = {
-            title: this.props.recipeName
+            title: this.props.recipeName,
+            author: this.props.author,
+            ingredients: this.props.ingredients,
+            id: this.props.keyProp
         }
         store.dispatch(addItem(data, dayNum));
     }
 
+    retrieveSteps = () => {
+        let returnVal = []
+        if (typeof this.props.steps == 'undefined') {
+            return returnVal
+        }
+        let num = 1;
+        this.props.steps.forEach(step => {
+            returnVal.push(<Direction stepNum={num} stepContent= {step}/>)
+            num++;
+        })
+        return returnVal;
+    }
+
+    retrieveIngredients = () => {
+        let returnVal = []
+        if (typeof this.props.ingredients == 'undefined') {
+            return returnVal;
+        }
+        this.props.ingredients.forEach(obj => {
+            returnVal.push(<Ingredient text= {obj.amount + " " + obj.unit + " of " + obj.name}/>)
+        })
+        return returnVal
+    }
+
     render() {
-        return (
+        return (                        
             <div>
                 <div onClick={this.handleClick} className= "recipe-item">
+                    <img className="image-container" src={this.props.imageUrl}></img>
                     <div className= "recipe-overlay">
-                        <div style= {{height: "70%"}}></div>
+                        <div style={{height: "80%"}}></div>
                         <p className= "recipe-item-name">{this.props.recipeName}</p>
                     </div>
+
                 </div>
                 <Dialog fullWidth= {true} maxWidth= {"md"} open={this.state.setOpen} onClose={this.handleClose}>
                     <div className= "recipe-dialog-body">
+                        <div style={{overflow: "hidden", height: "30%"}}>
+                            <img className="image-container bigger" src={this.props.imageUrl} />
+                        </div>
                         <div className= "recipe-header">
                             <p style={{margin: "0px"}} className= "dialog-header-name">{this.props.recipeName}</p>
                         </div>
-                        <Scrollbars>
+                        <Scrollbars style={{height: "100%"}}>
                         <div className= "recipe-body">
                             <div className= "recipe-tags-div">
 
@@ -111,21 +143,17 @@ class RecipeItem extends React.Component {
                                 <div className= "ingredient-list">
                                     <h1 style= {{margin: "0"}}>Ingredients</h1>
                                     <div className= "ingredients-container">
-                                        <Ingredient text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
-                                        <Ingredient text="test"/>
-                                        <Ingredient text="test"/>
+                                        {
+                                            this.retrieveIngredients()
+                                        }
                                     </div>
                                 </div>
                                 <div className= "direction-list">
                                     <h1 style= {{margin: "0", marginBottom: "10px"}}>Directions</h1>
                                     <div className= "directions-container">
-                                        <Direction stepNum="1" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="2" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="3" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="3" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="3" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="3" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                                        <Direction stepNum="3" stepContent= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                                        {
+                                            this.retrieveSteps()
+                                        }
                                     </div>
                                 </div>
                             </div>

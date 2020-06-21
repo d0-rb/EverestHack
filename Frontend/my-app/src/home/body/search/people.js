@@ -42,12 +42,12 @@ class PeopleItem extends React.Component {
                                 <div style={{postion: "relative", left: "0px"}} className= "grid-container">
                                     <div className= "item-grid">
                                         <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
-                                        <RecipeItem recipeName= "Casserole"/>
+                                        <RecipeItem recipeName= "Pizza"/>
+                                        <RecipeItem recipeName= "Ice Cream"/>
+                                        <RecipeItem recipeName= "Ravioli"/>
+                                        <RecipeItem recipeName= "Muttar Paneer"/>
+                                        <RecipeItem recipeName= "Pad Thai"/>
+                                        <RecipeItem recipeName= "Burger"/>
                                     </div>
                                 </div>
                             </Scrollbars>
