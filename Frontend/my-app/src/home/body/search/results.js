@@ -16,7 +16,7 @@ class Results extends React.Component {
     }  
 
     componentDidMount() {
-        let url = "https://hlq3rrn71l.execute-api.us-east-1.amazonaws.com/alpha/recipes?id=4"
+        let url = "https://hlq3rrn71l.execute-api.us-east-1.amazonaws.com/alpha/recipes"
         // let imaginaryHope= []
         $.get(url, (data) => {
             this.setState({
@@ -41,10 +41,10 @@ class Results extends React.Component {
                     <Scrollbars style={{height: "95%", position: "relative", left: "15px"}}>
                         <div className= "grid-container">
                             <div className= "people-grid">
-                                <PeopleItem name= "Test Smith"/>
-                                <PeopleItem name= "John Smith"/>
-                                <PeopleItem name= "John Smith"/>
-                                <PeopleItem name= "John Smith"/>
+                                <PeopleItem name= "John Doe"/>
+                                <PeopleItem name= "Ron Weasley"/>
+                                <PeopleItem name= "Todd Smith"/>
+                                <PeopleItem name= "Sam Johnson"/>
                             </div>
                         </div>
                     </Scrollbars>
@@ -63,13 +63,12 @@ class Results extends React.Component {
         else {
             let tempArray = []
             items.forEach(recipe => {
-                tempArray.push(<RecipeItem key={recipe.id} imageUrl= {recipe.imageLink} recipeName= {recipe.name} steps= {recipe.steps} ingredients= {recipe.ingredients}/>)
+                tempArray.push(<RecipeItem author= {recipe.author} keyProp= {recipe.id} key={recipe.id} imageUrl= {recipe.imageLink} recipeName= {recipe.name} steps= {recipe.steps} ingredients= {recipe.ingredients}/>)
             })
             return (
                 <div className= "results-base">
                     <div className= "add-recipe-container">
                         <h1 className= "main-results-title">Recipes</h1>
-                        <button className="material-icons add-recipe-button">add</button>
                     </div>
                     <div className= "separator-line"></div>
                     <Scrollbars style={{height: "95%", position: "relative", left: "15px"}}>

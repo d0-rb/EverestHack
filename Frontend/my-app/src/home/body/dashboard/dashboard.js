@@ -5,7 +5,6 @@ import Dialog from '@material-ui/core/Dialog';
 import { store } from '../store'
 import './dashboard.css'
 
-
 let date = new Date();
 let dateNum = date.getDay();
 let datSeq = []
@@ -55,12 +54,6 @@ for (let i = 0; i < 7; i++) {
     monthDate = date.getDate()
 }
 
-console.log(monthSeq)
-const unsubscribe = store.subscribe(handleChange)
-function handleChange() {
-
-}
-
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
@@ -89,7 +82,7 @@ class Dashboard extends React.Component {
     }
 
     krogerClick = () => {
-
+        window.location.href = "https://api.kroger.com/v1/connect/oauth2/authorize?scope=cart.basic:write&response_type=code&client_id=testapp2-402daa89511294e10dedd09a5d790afe8269121174086912329&redirect_uri=http://kroger-redirect-page.s3-website.us-east-2.amazonaws.com/"
     }
 
     storeGen = (val) => {
@@ -101,7 +94,7 @@ class Dashboard extends React.Component {
             console.log(val)
             if (inlet.day.substring(0, 3).toUpperCase() == val) {
                 inlet.list.forEach(obj => {
-                    arr.push(<CalendarItem name={obj.title} author="Bob Ross" />)
+                    arr.push(<CalendarItem name={obj.title} author={obj.author} />)
                 })
             }
         })
@@ -162,10 +155,18 @@ class Dashboard extends React.Component {
                 </div>
                 <Dialog onClose={this.handleClose} open={this.state.open} maxWidth={"md"}>
                     <div className="shopping-cart-export-base">
-                        <h3 className="shopping-cart-title">Checkout With..</h3>
+                        <h3 className="shopping-cart-title">Checkout With</h3>
                         <div className="shopping-options">
-                            <div onClick= {this.krogerClick} className= "kroger-shop">
+                            <div id="first" onClick= {this.krogerClick} className= "kroger-shop">
                                 <img className="kroger_logo" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Kroger_logo_%281961-2019%29.svg"></img>
+                            </div>
+                            <div style= {{width: "20px"}}></div>
+                            <div onClick= {this.krogerClick} className= "kroger-shop">
+                                <img className="kroger_logo walmart" src="https://logos-download.com/wp-content/uploads/2016/02/Walmart_logo_transparent_png.png"></img>
+                            </div>
+                            <div style= {{width: "20px"}}></div>
+                            <div onClick= {this.krogerClick} className= "kroger-shop">
+                                <img className="kroger_logo" src="https://cdn4.iconfinder.com/data/icons/file-extension-names-vol-8/512/24-512.png"></img>
                             </div>
                         </div>
                     </div>

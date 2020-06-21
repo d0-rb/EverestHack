@@ -107,7 +107,7 @@
 /* Shopping Cart modal */
 .shopping-cart-export-base {
     height: 25vh;
-    width: 25vw;
+    width: 30vw;
     background-color: white;
     border-radius: 20px;
     padding: 10px;
@@ -125,6 +125,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-spacing: 15px;
 }
 
 .kroger-shop {
@@ -134,6 +135,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -141,3 +143,12 @@
 .kroger_logo {
     height: 50%;
 }
+
+.walmart {
+    height: 30%;
+    width: 90%;
+}
+
+
+
+

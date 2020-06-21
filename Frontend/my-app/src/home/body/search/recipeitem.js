@@ -83,7 +83,10 @@ class RecipeItem extends React.Component {
                 break;
         }
         let data = {
-            title: this.props.recipeName
+            title: this.props.recipeName,
+            author: this.props.author,
+            ingredients: this.props.ingredients,
+            id: this.props.keyProp
         }
         store.dispatch(addItem(data, dayNum));
     }
@@ -129,9 +132,9 @@ class RecipeItem extends React.Component {
                             <img className="image-container bigger" src={this.props.imageUrl} />
                         </div>
                         <div className= "recipe-header">
-                        <p style={{margin: "0px"}} className= "dialog-header-name">{this.props.recipeName}</p>
+                            <p style={{margin: "0px"}} className= "dialog-header-name">{this.props.recipeName}</p>
                         </div>
-                        <Scrollbars>
+                        <Scrollbars style={{height: "100%"}}>
                         <div className= "recipe-body">
                             <div className= "recipe-tags-div">
 
