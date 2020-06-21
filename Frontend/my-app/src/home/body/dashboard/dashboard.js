@@ -1,6 +1,7 @@
 import React from 'react'
 import CalendarContainer from './calendarcontainer'
 import CalendarItem from './calendaritem'
+import { store } from '../store'
 import './dashboard.css'
 
 let date = new Date();
@@ -53,11 +54,38 @@ for (let i = 0; i < 7; i++) {
 }
 
 console.log(monthSeq)
+const unsubscribe = store.subscribe(handleChange)
+function handleChange() {
+
+}
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
     }  
+
+    componentDidMount() {
+        const unsubscribe = store.subscribe(() => {
+            console.log("store updated")
+            this.forceUpdate()
+        })        
+    }
+
+    storeGen = (val) => {
+        let arr = []
+        if (typeof store.getState() == 'undefined') {
+            return arr;
+        }
+        store.getState().forEach(inlet => {
+            console.log(val)
+            if (inlet.day.substring(0, 3).toUpperCase() == val) {
+                inlet.list.forEach(obj => {
+                    arr.push(<CalendarItem name={obj.title} author="Bob Ross" />)
+                })
+            }
+        })
+        return arr;
+    }
 
     render() {
         return (
@@ -67,21 +95,49 @@ class Dashboard extends React.Component {
                 <div className= "calendar-container-div">
                 
                 <CalendarContainer day= {datSeq[0]} dayNum= {monthSeq[0]}>
-                    <CalendarItem name="Test" author="Bob Ross" />
+                    {
+                        this.storeGen(datSeq[0])
+                    }
                 </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day= {datSeq[1]} dayNum={monthSeq[1]}></CalendarContainer>
+                <CalendarContainer day= {datSeq[1]} dayNum={monthSeq[1]}>
+                    {
+                        this.storeGen(datSeq[1])
+                    }
+                </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day= {datSeq[2]} dayNum={monthSeq[2]}></CalendarContainer>
+                <CalendarContainer day= {datSeq[2]} dayNum={monthSeq[2]}>
+                    {
+                        this.storeGen(datSeq[2])
+                    }
+                </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day= {datSeq[3]} dayNum={monthSeq[3]}></CalendarContainer>
+                <CalendarContainer day= {datSeq[3]} dayNum={monthSeq[3]}>
+                    {
+                        this.storeGen(datSeq[3])
+                    }
+                </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day= {datSeq[4]} dayNum={monthSeq[4]}></CalendarContainer>
+                <CalendarContainer day= {datSeq[4]} dayNum={monthSeq[4]}>
+                    {
+                        this.storeGen(datSeq[4])
+                    }
+                </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day={datSeq[5]} dayNum={monthSeq[5]}></CalendarContainer>
+                <CalendarContainer day={datSeq[5]} dayNum={monthSeq[5]}>
+                    {
+                        this.storeGen(datSeq[5])
+                    }
+                </CalendarContainer>
                 <div className= "separator-line"></div>
-                <CalendarContainer day={datSeq[6]} dayNum={monthSeq[6]}></CalendarContainer>
-
+                <CalendarContainer day={datSeq[6]} dayNum={monthSeq[6]}>
+                    {
+                        this.storeGen(datSeq[6])
+                    }
+                </CalendarContainer>
+                <div className= "shopping-cart-container">
+                    <p className= "material-icons" style= {{margin: "0px", fontSize: "35px", marginLeft: "2px", marginTop: "2px"}}>shopping_cart</p>
+                </div>
                 </div>
             </div>
         )

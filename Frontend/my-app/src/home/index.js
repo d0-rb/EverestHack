@@ -3,7 +3,6 @@ import NavBar from './navbar/navbar.js'
 import BodyMain from './body/bodymain'
 import './index.css'
 
-
 class HomeBase extends React.Component {
     constructor(props) {
         super(props)
