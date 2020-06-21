@@ -1,0 +1,355 @@
+/* Accounts Page */
+#n2_0 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgb(255, 255, 255);
+}
+ 
+	/* Home Page (Recipes) */
+	#n51_266 {
+		width: 1440px;
+		height: 1024px;
+		overflow: hidden;
+		background: rgb(255, 255, 255);
+	}
+ 
+		/* Shadow */
+		#n51_267 {
+			background: rgb(245, 245, 245);
+			width: 100vw;
+			top: 46px;
+			height: 978px;
+		}
+ 
+		/* Base */
+		#n51_269 {
+			background: rgb(255, 255, 255);
+			border-radius: 10px;
+			left: 32px;
+			width: 100%;
+			top: 66px;
+			height: 892px;
+		}
+ 
+		/* Ellipse 30 */
+		#n51_317 {
+			width: 84px;
+			height: 84px;
+			box-shadow: rgba(111, 82, 237, 0.42) 0px 4px 5px 0px;
+			left: 1345px;
+			top: 907px;
+		}
+ 
+		/* NavBar */
+		#n51_342 {
+			width: 100%;
+			height: 46px;
+			overflow: hidden;
+			background: rgb(255, 255, 255);
+		}
+ 
+			/* icon/logout */
+			#n51_343 {
+				width: 24px;
+				height: 24px;
+				overflow: hidden;
+				left: 100%;
+				top: 11px;
+			}
+ 
+				/* Vector */
+				#n51_344 {
+					left: 12.5%;
+					right: 62.5%;
+					top: 12.5%;
+					bottom: 12.5%;
+				}
+ 
+				/* Vector */
+				#n51_345 {
+					left: 66.6667%;
+					right: 12.5%;
+					top: 29.17%;
+					bottom: 29.17%;
+				}
+ 
+				/* Vector */
+				#n51_346 {
+					left: 37.5%;
+					right: 12.5%;
+					top: 50%;
+					bottom: 50%;
+				}
+ 
+			/* Rectangle 45 */
+			#n51_347 {
+				background: rgb(111, 82, 237);
+				width: 46px;
+				height: 46px;
+			}
+ 
+			/* HOME - PROFILE - SIGNOUT */
+			#n51_348 {
+				font-family: Cabin;
+				font-size: 18px;
+				font-weight: 700;
+				letter-spacing: 0.18px;
+				color: rgb(0, 0, 0);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				width: 826px;
+				transform: translate(0px, -1.24px);
+				line-height: 24px;
+				height: 32px;
+				left: 35%;
+				top: 14px;
+			}
+ 
+		/* Your Name */
+		#n51_377 {
+			font-family: Cabin;
+			font-size: 60px;
+			font-weight: 700;
+			letter-spacing: 0.6px;
+			color: rgb(111, 82, 237);
+			vertical-align: middle;
+			text-align: center;
+			justify-content: center;
+			width: 450px;
+			transform: translate(0px, 19.76px);
+			line-height: 24px;
+			height: 137px;
+			left: 32px;
+			top: 130px;
+		}
+ 
+		/* Line 21 */
+		#n51_378 {
+			left: 78.9983px;
+			width: 1281px;
+			top: 197.496px;
+			height: 0px;
+		}
+ 
+		/* Group 13 */
+		#n51_438 {
+			width: 347.836px;
+			height: 190.604px;
+			overflow: visible;
+			left: 156px;
+			top: 225px;
+		}
+ 
+			/* Base */
+			#n51_439 {
+				border-radius: 10px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+			}
+ 
+			/* Classic Lasagna */
+			#n51_440 {
+				font-family: Cabin;
+				font-size: 25px;
+				font-weight: 700;
+				letter-spacing: 0.25px;
+				color: rgb(255, 255, 255);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				transform: translate(0px, 2.26px);
+				line-height: 24px;
+				left: -2.29994%;
+				right: 2.29994%;
+				top: 74.5%;
+				bottom: 2.73%;
+			}
+ 
+		/* Group 14 */
+		#n51_445 {
+			width: 347.836px;
+			height: 190.604px;
+			overflow: visible;
+			left: 537px;
+			top: 225px;
+		}
+ 
+			/* Base */
+			#n51_446 {
+				border-radius: 10px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+			}
+ 
+			/* Classic Lasagna */
+			#n51_447 {
+				font-family: Cabin;
+				font-size: 25px;
+				font-weight: 700;
+				letter-spacing: 0.25px;
+				color: rgb(255, 255, 255);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				transform: translate(0px, 2.26px);
+				line-height: 24px;
+				left: -2.29994%;
+				right: 2.29994%;
+				top: 74.5%;
+				bottom: 2.73%;
+			}
+ 
+		/* Group 15 */
+		#n51_448 {
+			width: 347.836px;
+			height: 190.604px;
+			overflow: visible;
+			left: 918px;
+			top: 219px;
+		}
+ 
+			/* Base */
+			#n51_449 {
+				border-radius: 10px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+			}
+ 
+			/* Classic Lasagna */
+			#n51_450 {
+				font-family: Cabin;
+				font-size: 25px;
+				font-weight: 700;
+				letter-spacing: 0.25px;
+				color: rgb(255, 255, 255);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				transform: translate(0px, 2.26px);
+				line-height: 24px;
+				left: -2.29994%;
+				right: 2.29994%;
+				top: 74.5%;
+				bottom: 2.73%;
+			}
+ 
+ 
+			/* Rectangle 3 */
+			#n51_458 {
+				background: rgb(111, 82, 237);
+				border-radius: 5px;
+				left: 78.8194%;
+				right: 5.55556%;
+				top: 12.3%;
+				bottom: 82.81%;
+			}
+ 
+			/* icon/plus */
+			#n51_459 {
+				overflow: hidden;
+				left: 80.0694%;
+				right: 18.5417%;
+				top: 13.77%;
+				bottom: 84.28%;
+			}
+ 
+				/* Vector */
+				#n51_460 {
+					left: 2px;
+					width: 16px;
+					top: 2px;
+					height: 16px;
+				}
+ 
+			/* Create new recipe */
+			#n51_461 {
+				font-family: Cabin;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 0.18px;
+				color: rgb(255, 255, 255);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				line-height: 21.0938px;
+				left: 82.4306%;
+				right: 6.94444%;
+				top: 13.67%;
+				bottom: 84.18%;
+			}
+ 
+		/* Group 16 */
+		#n51_451 {
+			width: 347.836px;
+			height: 190.604px;
+			overflow: visible;
+			left: 156px;
+			top: 443px;
+		}
+ 
+			/* Base */
+			#n51_452 {
+				border-radius: 10px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+			}
+ 
+			/* Classic Lasagna */
+			#n51_453 {
+				font-family: Cabin;
+				font-size: 25px;
+				font-weight: 700;
+				letter-spacing: 0.25px;
+				color: rgb(255, 255, 255);
+				vertical-align: middle;
+				text-align: center;
+				justify-content: center;
+				transform: translate(0px, 2.26px);
+				line-height: 24px;
+				left: -2.29994%;
+				right: 2.29994%;
+				top: 74.5%;
+				bottom: 2.73%;
+			}
+
+            #n51_457 {
+               background-color: #6f52ed;
+                position: absolute;
+                width: 225px;
+                height: 50px;
+                left: 1135px;
+                top: 126px;
+
+            }
+            #n51_461 {
+                position: absolute;
+                width: 225px;
+                height: 35px;
+                left: 0px;
+                right: 6.94%;
+                top: 13.67%;
+                bottom: 84.18%;
+                font-family: Cabin, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.01em;
+                color: white;
+}
+            #n51_460 {
+                position: absolute;
+                width: 225px;
+                height: 35px;
+                left: 80.07%;
+                right: 18.54%;
+                top: 13.77%;
+                bottom: 84.28%;
+
+            }

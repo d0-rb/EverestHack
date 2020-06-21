@@ -87,3 +87,68 @@
     display: flex;
     flex-direction: row;
 }
+
+.shopping-cart-container {
+    height: 75px;
+    width: 75px;
+    border-radius: 37.5px;
+    background-color: #6F52ED;
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Shopping Cart modal */
+.shopping-cart-export-base {
+    height: 25vh;
+    width: 30vw;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.shopping-cart-title {
+    margin: 0;
+}
+
+.shopping-options {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-spacing: 15px;
+}
+
+.kroger-shop {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.kroger_logo {
+    height: 50%;
+}
+
+.walmart {
+    height: 30%;
+    width: 90%;
+}
+
+
+
+

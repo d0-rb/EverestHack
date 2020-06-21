@@ -1,6 +1,10 @@
 {
 	"auth": {
+<<<<<<< HEAD
 		"myappd6b560f9": {
+=======
+		"myapp866af1f4": {
+>>>>>>> master
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],

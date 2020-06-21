@@ -7,7 +7,8 @@ import { withStyles } from '@material-ui/core';
 const PurpleSwitch = withStyles({
     root: {
         width: 60,
-        height: 43,        
+        height: 43,
+        marginBottom: 12,
     },
     switchBase: {
       color: '#6F52ED',
@@ -33,17 +34,10 @@ const PurpleSwitch = withStyles({
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-            checked: false
-        }
-            
     }  
     
     handleChange = () => {
-        this.setState({
-            checked: !this.state.checked
-        })
+        this.props.onSwitchToggle()
     }
 
     render() {
@@ -56,8 +50,11 @@ class SearchBar extends React.Component {
                     </div>
                     <div className= "separator-line dark"></div>
                 </div>
-                <p></p>
-                <PurpleSwitch checked={this.state.checked} onChange= {this.handleChange} name= "bodyToggle"/>
+                <div>
+                    <p  className= "material-icons half-dark">menu_book</p>
+                    <PurpleSwitch checked={this.props.checked} onChange= {this.handleChange} name= "bodyToggle"/>
+                    <p className= "material-icons half-dark">group</p>
+                </div>
             </div>
         )
     }
